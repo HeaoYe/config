@@ -1,0 +1,22 @@
+{
+    "editor.fontFamily": "JetBrainsMonoNL NFM:style=Bold",
+    "workbench.tree.indent": 16,
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "clangd.arguments": [
+        "--header-insertion=never",
+        "--compile-commands-dir=build",
+        "--clang-tidy"
+    ],
+    "editor.codeLensFontFamily": "JetBrainsMonoNL NFM:style=Bold",
+    "editor.inlayHints.fontFamily": "JetBrainsMonoNL NFM:style=Bold",
+    "debug.console.fontFamily": "JetBrainsMonoNL NFM:style=Bold",
+    "scm.inputFontFamily": "JetBrainsMonoNL NFM:style=Bold",
+    "terminal.integrated.fontFamily": "monospace",
+    "workbench.hover.delay": 100,
+    "extensions.experimental.affinity": {
+        "ms-vscode.cmake-tools": 2,
+        "llvm-vs-code-extensions.vscode-clangd": 3
+    },
+    "editor.largeFileOptimizations": false,
+    "editor.fontSize": 20
+}
