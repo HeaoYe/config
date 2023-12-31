@@ -181,8 +181,65 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux*) exit 0; esac; done; 
     reboot 重启
     等待重启，然后就能看到一个登陆界面，输入用户密码进入Hyprland
     Win+Q 开启终端
+    Win+C 关闭窗口
+    Win+R 呼出菜单
     Win+数字 切换桌面
+    Win+Shift+数字 将当前窗口移动到对应工作区
     Win+鼠标左键 拖动窗口
     Win+鼠标右键 调整窗口大小
     Win+V 让窗口浮动出来
     （安装OBS中。。。。）
+
+    安装输入法
+        sudo pacman -S fcitx5 fcitx5-chinese-addons fcitx5-configtool
+    配置输入法
+        fcitx5-configtool
+    安装paru
+        git clone https://aur.archlinux.org/paru.git
+        cd paru
+        makepkg -si
+    安装rofi
+        sudo pacman -S rofi
+    安装chrome和vscodfe
+        paru -S google-chrome
+        sudo pacman -S code
+    配置
+        获取我的配置文件
+            git clone https://github.com/HeaoYe/config
+            cd config
+        配置neovim
+            cp nvim ~/.config/nvim -r
+        配置chrome和vscode
+            cp *.conf ~/.config/
+            code
+            安装插件
+            clangd CMake CmakeTools CodeLLDB GruvboxTheme
+            cp settings.json ~/.config/Code\ -\ OSS/User/
+        配置kitty
+            cp kitty ~/.config/ -r
+            在~/.config/kitty/kitty.conf 中设置字体大小
+        配置hyprland
+            sudo pacman -S xorg-xrdb
+            cp hypr ~/.config/ -r
+        配置waybar
+            cp waybar ~/.config/ -r
+            手动启动waybar查看效果
+            waybar -c ~/.config/waybar/Waybar-3.0/config -s ~/.config/waybar/Waybar-3.0/style.css
+            除了第一次配置，以后会自动启动waybar
+        配置声音
+            sudo pacman -S pavucontrol-qt
+            pavucontrol-qt
+        （可选）
+        安装nvtop
+            sudo pacman -S nvtop
+        安装grim，截图软件
+            sudo pacman -S grim
+        安装QQ音乐
+            （我装过了，不演示了）
+            paru -S qqmusic-bin
+        安装大鹅，我也不知道这个软件能干什么
+            paru -S daed-git
+        没啥要安装的了，arch配置成功
+        hyprland和waybar和kitty配置文件是clone的别人的
+        链接放简介里
+
