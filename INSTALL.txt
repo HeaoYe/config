@@ -53,9 +53,9 @@ OK连上物理机了，开始安装Archlinux
         Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
         Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
     更新
-        pacman -Syy
+        pacman -Sy
     安装Arch
-        pacstrap -K /mnt base base-devel linux linux-firmware git fish grub efibootmgr os-prober openssl networkmanager dhcpcd neovim
+        pacstrap -K /mnt base base-devel linux linux-firmware linux-headers git fish grub efibootmgr os-prober openssl networkmanager dhcpcd neovim
         等待安装完。
 
 8.arch的基础配置
@@ -208,7 +208,7 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux*) exit 0; esac; done; 
             git clone https://github.com/HeaoYe/config
             cd config
         配置neovim
-            cp nvim ~/.config/nvim -r
+            cp nvim ~/.config/ -r
         配置chrome和vscode
             cp *.conf ~/.config/
             code
